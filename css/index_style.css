@@ -204,6 +204,7 @@ nav ul li a:hover:after {
   height: 22px;
   border: 1px solid #fff;
   border-radius: 50%;
+  cursor: pointer;
 }
 .dots span:nth-child(1){
   background-color: #9c27b0;

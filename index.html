@@ -10,26 +10,28 @@
     <!-- font style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- icons link -->
-    <link rel="stylesheet" href="css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- page normalize -->
     <link rel="stylesheet" href="css/normalize.css">
+    <!-- icons link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- title logo icon -->
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/colorStyle.css">
 </head>
 <body>
     <header>
         <div class="logo"><img src="images/logo.png" alt=""></div>
         <nav>
             <ul>
-                <li><a href="" class="active">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a class="active" id="nav1" onclick="navClick1()">Home</a></li>
+                <li><a id="nav2" onclick="navClick2()">About</a></li>
             </ul>
         </nav>
     </header>
-    <div class="content">
+    <div class="content" id="content">
         <div class="title">
             <div>Welcome To</div>
             <h1>Start Coding Club</h1>
@@ -39,6 +41,26 @@
         <div>
             <a href="">Sign Up</a>
             <a href="">Sign In</a>
+        </div>
+    </div>
+    <div class="about" id="about">
+        <h1>Who are Start Coding Club?</h1>
+        <div class="par">
+            <h2>About the club</h2>
+            <p>it's an app development club created by L2 students to start coding by organizing competition between us to
+                encourage us practicing</p>
+        </div>
+        <span></span>
+        <div class="par">
+            <h2>About Team</h2>
+            <p>We create a competitive environment dividing ourselves into small group (5 students for each group) then we
+                compete with each other for how builds the best website.</p>
+        </div>
+        <span></span>
+        <div class="par">
+            <h2>Club Goals</h2>
+            <p>- Create competitive environment. <br> - Help ourselves choose our future. <br>- Achieve teamwork. <br>-
+                Encourage the rest to start.</p>
         </div>
     </div>
     <div class="icon">

@@ -19,3 +19,22 @@ function dotClick4(){
     document.documentElement.style.setProperty('--btnBg', '#ff5722a8');
     document.documentElement.style.setProperty('--brBtn', '#ff5722e0');
 }
+let page1 = document.querySelector(".content");
+let page2 = document.querySelector(".about");
+let navbar = document.querySelectorAll("nav ul li a");
+function pageAct(){
+    page1.style.display = "none";
+    page2.style.display = "none";
+    for(let i = 0; i<navbar.length ; i++)
+        navbar[i].classList.remove('active');
+}
+function navClick1(){
+    pageAct();
+    page1.style.display = "flex";
+    navbar[0].classList.add('active');
+}
+function navClick2(){
+    pageAct();
+    page2.style.display = "flex";
+    navbar[1].classList.add('active');
+}

@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box !important;
+    font-family: "Urbanist", sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: 300ms;
+}
+@import url(../../css/colorStyle.css);
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to left, var(--prColor) 30% , transparent 30%);
+}
+header {
+    width: 70%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+  .logo img {
+    width: 70px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 25px;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 120px;
+    justify-content: space-between;
+  }
+  nav ul li {
+    width: fit-content;
+    white-space: nowrap;
+  }
+  nav ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  nav ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    display: block;
+    box-sizing: border-box;
+    background: var(--prColor);
+    margin: auto;
+    transition: all 0.5s ease 0s;
+    font-size: 20px;
+  }
+  nav ul li .active::after {
+    width: 100% !important;
+  }
+  nav ul li a:hover:after {
+    width: 100%;
+  }
+.content{
+    width: 70%;
+    display: flex;
+    height: fit-content;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+}
+.content img{
+    width: 400px;
+    height: 300px;
+    transform: translateX(80px);
+}
+.content .form{
+    flex-basis: 450px;
+    background-color: #fff;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 7px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.51);
+}
+.form h1{
+    flex-basis: 60px;
+    font-size: 35px;
+    font-weight: 900;
+    color: var(--prColor);
+}
+.form h2{
+    flex-basis: 50px;
+    font-size: 25px;
+    font-weight: 900;
+    color: var(--prColor);
+}
+.form form{
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.name{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+.name .in{
+    flex-basis: 47%;
+    font-size: 17px;
+    color: #000;
+    font-weight: 500;
+}
+.in input{
+    height: 35px !important;
+    margin-top: 10px;
+}
+.inp{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    font-size: 17px;
+    color: #000;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.inp label{
+    margin-bottom: 10px;
+}
+.in input , .inp input{
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid var(--brBtn);
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.in input:focus , .inp input:focus{
+    font-size: 15px;
+    font-weight: 700;
+    outline: none;
+}
+.inp i{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: var(--prColor);
+}
+form button{
+    margin-top: 15px;
+    width: 90%;
+    height: 40px;
+    border: 1px solid var(--brBtn);
+    border-radius: 7px;
+    background-color: var(--btnBg);
+    font-size: 20px;
+    font-weight: 700;
+    color: #ededed;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: var(--prColor);
+    color: #fff;
+    font-size: 21px;
+    text-shadow: 0 0 2px #fff;
+}
+.check{
+  width: 80%;
+  text-align: center;
+  flex-direction: column;
+  margin: 80px auto;
+  font-size: 17px;
+  font-weight: 600;
+  display: none;
+}
+.check p{
+  margin: 15px auto;
+}
+/* responsive */
+@media only screen and (max-width: 310px){
+  .form h1 {
+    font-size: 25px !important;
+  }
+  .inp{
+    width: 100% !important;
+  }
+  form button{
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 610px){
+  header {
+    justify-content: space-between;
+    width: 100%;
+  }
+  nav{
+    flex-wrap: wrap;
+  }
+  body{
+    background: #fff;
+  }
+  .content{
+    width: 90%;
+    justify-content: center;
+  }
+  .content img{
+    display: none;
+  }
+  .form{
+    width: 500px;
+  }
+  .form h1 {
+    font-size: 30px;
+  }
+  .name {
+    width: 95%;
+  }
+  .inp{
+    width: 95%;
+  }
+  form button{
+    width: 95%;
+  }
+}
+@media only screen and (min-width: 611px) and (max-width: 784px){
+  header {
+    justify-content: space-between;
+  }
+  nav{
+    flex-wrap: wrap;
+  }
+  body{
+    background: #fff;
+  }
+  .content{
+    width: 90%;
+    justify-content: center;
+  }
+  .content img{
+    display: none;
+  }
+  .form{
+    width: 500px;
+  }
+  .form h1 {
+    font-size: 30px;
+  }
+  .name {
+    width: 95%;
+  }
+  .inp{
+    width: 95%;
+  }
+  form button{
+    width: 95%;
+  }
+}
+@media only screen and (min-width: 785px) and (max-width: 889px){
+  .content img{
+    width: 250px;
+    height: 250px;
+  }
+  .content{
+    width: 77%;
+    justify-content: center;
+  }
+  .form h1 {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 890px) and (max-width: 1250px) {
+  header{
+    width: 77%;
+  }
+  .content img{
+    width: 300px;
+    height: 300px;
+  }
+  .content{
+    width: 77%;
+    justify-content: center;
+  }
+  .form h1 {
+    font-size: 30px;
+  }
+  .logo img {
+    margin-left: 0;
+  }
+}

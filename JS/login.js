@@ -27,6 +27,7 @@ get(child(dbRef, `ThemeColor/`)).then((snapshot) => {
   }
 }).catch((error) => {
   console.error(error);
+  location.reload()
 });
 
 

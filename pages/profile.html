@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCC | Your Profile</title>
+    <!-- font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- icons link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- title logo icon -->
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <!-- style -->
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/loading_style.css">
+    <link rel="stylesheet" href="../css/navBar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="../images/logo.png" alt="">
+                    <p class="back">Start Coding Club</p>
+                </div>
+                <i class="fa fa-bars" onclick="navbar()" id="menu"></i>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="projects.html">Project</a></li>
+                    <li><a href="chat.html">Chat</a></li>
+                    <li><a href="#" class="active">Profile</a></li>
+                    <li><a href="members.html">Members</a></li>
+                </ul>
+                <div class="profile">
+                    <div>
+                        <img id="userPhoto" src="" alt="">
+                        <p id="userName"></p>
+                    </div>
+                    <ul>
+                        <li><a href="edit_profile.html">Edit Profile</a></li>
+                        <li><button><i class="fa fa-sign-out"></i> Sign Out</button></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="pr">
+        <div class="container">
+            <div class="info">
+                <img src="" alt="" id="proImg">
+                <div>
+                    <h1 id="name"></h1>
+                    <h2 id="usn"></h2>
+                    <p id="bio"></p>
+                    <a href="#" id="email"><i class="fa fa-envelope"></i> </a>
+                </div>
+                <div class="social">
+                    <a href="" target="_blank"><i class="fa fa-facebook"></i>Facebook</a>
+                    <a href="" target="_blank"><i class="fa fa-github"></i>Github</a>
+                    <a href="" target="_blank"><i class="fa fa-instagram"></i>Instagram</a>
+                </div>
+            </div>
+            <div class="skills">
+                <div>
+                    <h2>Your Skills</h2>
+                    <a href="edit_profile.html">Edit skills</a>
+                </div>
+                <ul>
+                </ul>
+            </div>
+            <div class="projects">
+                <div>
+                    <h2>Your Projects</h2>
+                    <button id="addProject"><i class="fa fa-plus"></i> Add Project</button>
+                </div>
+                <div class="pro">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="addProject container">
+        <i class="fa fa-times" id="close"></i>
+        <h2>Add Project</h2>
+        <form id="form" method="GET">
+            <div>
+                <label for="nameP">Project Name</label>
+                <input type="text" id="nameP" name="nameP" required maxlength="45">
+            </div>
+            <div>
+                <label for="link">Github Link</label>
+                <input type="url" id="link" name="link" required>
+            </div>
+            <div class="choose">
+                <label for="template" id="lbl">Choose your template</label>
+                <input type="file" name="template" id="template" accept="image/*" value="" required>
+            </div>
+            <span id="up" style="align-self: center; color: red; font-size: 15px;"></span>
+            <button type="submit" id="adPro" disabled>Add</button>
+        </form>
+    </div>
+    <footer>
+        <div class="container">
+            <img src="../images/logo.png" alt="">
+            <p>Start Coding Club</p>
+            <div class="icon">
+                <a href="https://www.facebook.com/profile.php?id=100068577551540" target="_blank"><i
+                        class="fa fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/startcodingclub/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="mailto:startcodingclub@outlook.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            </div>
+            <img src="../images/logo.png" alt="">
+            <p>© 2021 Start Coding Club</p>
+        </div>
+    </footer>
+    <img id='url' alt="" style="display: none;">
+    <script>
+        function navbar()
+        {
+            let menu = document.getElementById( "menu" );
+            if ( menu.classList.contains( "fa-bars" ) )
+            {
+                document.querySelector( ".profile" ).classList.add( "vsb" );
+                document.querySelector( "nav > ul" ).classList.add( "vsb" );
+                menu.classList.replace( "fa-bars", "fa-times" );
+            } else
+            {
+                document.querySelector( ".profile" ).classList.remove( "vsb" );
+                document.querySelector( "nav > ul" ).classList.remove( "vsb" );
+                menu.classList.replace( "fa-times", "fa-bars" );
+            }
+        }
+        let addButton = document.getElementById( "addProject" );
+        addButton.onclick = () =>
+        {
+            document.querySelector( "section" ).style.filter = "brightness(0.35)";
+            document.querySelector( "header" ).style.filter = "brightness(0.35)";
+            document.querySelector( "footer" ).style.filter = "brightness(0.35)";
+            document.querySelector( ".addProject" ).style.display = "flex";
+        }
+        let close = document.getElementById( "close" );
+        close.onclick = () =>
+        {
+            document.querySelector( "section" ).style.filter = "brightness(1)";
+            document.querySelector( "header" ).style.filter = "brightness(1)";
+            document.querySelector( "footer" ).style.filter = "brightness(1)";
+            document.querySelector( ".addProject" ).style.display = "none";
+        }
+    </script>
+    <script src="../JS/profile.js" type="module"></script>
+    <script src="../JS/storage.js" type="module"></script>
+    <script>
+        document.querySelector( "section" ).style.display = "none";
+
+        window.addEventListener( "load", function ()
+        {
+            setTimeout( () =>
+            {
+                document.querySelector( ".loader-wrapper" ).style.display = "none";
+                console.log( "done1" );
+                document.querySelector( "section" ).style.display = "block";
+            }, 4000 )
+        } );
+    </script>
+</body>
+
+</html>

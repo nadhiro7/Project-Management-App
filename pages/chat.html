@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCC | Chat</title>
+    <!-- font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- icons link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- title logo icon -->
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <!-- style -->
+    <link rel="stylesheet" href="../css/chat.css">
+    <link rel="stylesheet" href="../css/loading_style.css">
+    <link rel="stylesheet" href="../css/navBar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="../images/logo.png" alt="">
+                    <p class="back">Start Coding Club</p>
+                </div>
+                <i class="fa fa-bars" onclick="navbar()" id="menu"></i>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="projects.html">Project</a></li>
+                    <li><a href="#" class="active">Chat</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="members.html">Members</a></li>
+                </ul>
+                <div class="profile">
+                    <div>
+                        <img src="" alt="" id="userPhoto">
+                        <p id="userName"></p>
+                    </div>
+                    <ul>
+                        <li><a href="edit_profile.html">Edit Profile</a></li>
+                        <li><button id="signOut"><i class="fa fa-sign-out"></i> Sign Out</button></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <i class="fa fa-wechat" id="userChat"> All Messages</i>
+    <section class="chat">
+        <div class="container">
+            <div class="header">
+                <h1>SCC Chat</h1>
+            </div>
+            <div class="body" id="body">
+            </div>
+            <div class="footer">
+                <form id="form" autocomplete="off">
+                    <input type="text" id="message" placeholder="Type a message...">
+                    <button id="send" autocomplete="off">SEND . <i class="fa fa-send"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="msgs">
+            <h3 id="scc"><i class="fa fa-arrow-left"></i></h3>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <img src="../images/logo.png" alt="">
+            <p>Start Coding Club</p>
+            <div class="icon">
+                <a href="https://www.facebook.com/profile.php?id=100068577551540" target="_blank"><i
+                        class="fa fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/startcodingclub/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="mailto:startcodingclub@outlook.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            </div>
+            <img src="../images/logo.png" alt="">
+            <p>© 2021 Start Coding Club</p>
+        </div>
+    </footer>
+    <script>
+        function navbar()
+        {
+            let menu = document.getElementById( "menu" );
+            if ( menu.classList.contains( "fa-bars" ) )
+            {
+                document.querySelector( ".profile" ).classList.add( "vsb" );
+                document.querySelector( "nav > ul" ).classList.add( "vsb" );
+                menu.classList.replace( "fa-bars", "fa-times" );
+            } else
+            {
+                document.querySelector( ".profile" ).classList.remove( "vsb" );
+                document.querySelector( "nav > ul" ).classList.remove( "vsb" );
+                menu.classList.replace( "fa-times", "fa-bars" );
+            }
+        }
+        document.getElementById( 'body' ).scrollTo( 0, document.getElementById( 'body' ).scrollHeight );
+        let form = document.getElementById( 'form' );
+        form.addEventListener( 'submit', ( e ) =>
+        {
+            e.preventDefault();
+        } );
+    </script>
+    <script type="module" src="../JS/chat.js"></script>
+    <script>
+        document.querySelector( "section" ).style.display = "none";
+
+        window.addEventListener( "load", function ()
+        {
+            setTimeout( () =>
+            {
+                document.querySelector( ".loader-wrapper" ).style.display = "none";
+                console.log( "done1" );
+                document.querySelector( "section" ).style.display = "block";
+            }, 4000 )
+        } );
+    </script>
+</body>
+
+</html>

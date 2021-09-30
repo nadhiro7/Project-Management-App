@@ -1,0 +1,452 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 300ms;
+  font-family: "Urbanist", sans-serif;
+}
+:root {
+  --prColor: #9c27b0;
+  --btnBg: #9c27b0a8;
+  --brBtn: #9c27b0e0;
+}
+::selection {
+  background-color: var(--btnBg);
+  color: #fff;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body {
+  position: relative;
+}
+/*  profile  */
+.pr {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--btnBg);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.pr .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.pr .container .info {
+  flex-basis: 68%;
+  height: fit-content;
+  background-color: #fff;
+  box-shadow: 2px 3px 35px rgba(0, 0, 0, 0.6);
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.pr .container .info > span {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 15px;
+}
+.pr .container .info > span input {
+  display: none;
+}
+.pr .container .info > span label {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  font-size: 25px;
+  cursor: pointer;
+  color: var(--prColor);
+}
+.pr .container .info img {
+  width: 300px;
+  height: 300px;
+}
+.pr .container .info > div:first-of-type {
+  margin-left: 20px;
+  height: 300px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pr .container .info div:first-of-type h1 {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+.pr .container .info div:first-of-type span {
+  width: 100%;
+}
+.pr .container .info div:first-of-type span input {
+  height: 40px;
+  border: 1px solid var(--brBtn);
+  border-radius: 7px;
+  font-size: 17px;
+  font-weight: 600;
+  padding-left: 7px;
+  width: 90%;
+}
+.pr .container .info div:first-of-type span textarea {
+  border: 1px solid var(--brBtn);
+  border-radius: 7px;
+  font-size: 17px;
+  font-weight: 600;
+  padding-left: 7px;
+  width: 90%;
+}
+:focus {
+  outline: none;
+  padding-left: 7px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.pr .container .info > .social {
+  width: 50%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+}
+.pr .container .info > .social span {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--prColor);
+  margin-top: 10px;
+}
+.pr .container .info > .social span input {
+  height: 40px;
+  border: 1px solid var(--brBtn);
+  border-radius: 7px;
+  font-size: 17px;
+  font-weight: 600;
+  padding-left: 7px;
+  width: 90%;
+  margin-top: 7px;
+}
+.pr .container .info button,
+.pr .container .skills button {
+  position: absolute;
+  width: 120px;
+  bottom: 15px;
+  right: 15px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid var(--brBtn);
+  background-color: var(--btnBg);
+  border-radius: 7px;
+  cursor: pointer;
+}
+.pr .container .info button:hover,
+.pr .container .skills button:hover {
+  background-color: var(--prColor);
+}
+.pr .container .skills {
+  flex-basis: 28%;
+  height: 610px;
+  background-color: #fff;
+  box-shadow: 2px 3px 35px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.pr .container .skills div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  position: relative;
+}
+.pr .container .skills div h2 {
+  font-size: 22px;
+}
+.pr .container .skills div i {
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 600;
+  align-self: center;
+  background-color: var(--btnBg);
+  color: #fff;
+  border-radius: 7px;
+  padding: 5px;
+  width: max-content;
+  height: max-content;
+  cursor: pointer;
+}
+.pr .container .skills div::after {
+  content: "";
+  height: 1.5px;
+  width: 100%;
+  background-color: var(--brBtn);
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+.pr .container .skills ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: max-content;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  list-style: inside;
+}
+.pr .container .skills ul li {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid var(--btnBg);
+  align-self: flex-end;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.projects {
+  min-height: 300px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 2px 3px 35px rgba(0, 0, 0, 0.6);
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.projects > div:first-child {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+.projects > div:first-child h2 {
+  font-size: 22px;
+}
+.projects > div:first-child button {
+  border: none;
+  background-color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.projects > div:first-child button:hover {
+  color: var(--prColor);
+  text-decoration: underline;
+}
+.projects > div:first-child::after {
+  content: "";
+  height: 1.5px;
+  width: 100%;
+  background-color: var(--brBtn);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+.pro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.project {
+  flex-basis: 31%;
+  height: 300px;
+  background-color: var(--btnBg);
+  background-size: 400% 400%;
+  border-radius: 7px;
+  padding-left: 10px;
+  padding-top: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.project > img {
+  width: 90%;
+  height: 230px;
+  border-radius: 7px;
+}
+.project > div {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.project > div > div {
+  display: flex;
+  flex-direction: row;
+}
+.project > div > div > img {
+  width: 45px;
+  height: 40px;
+}
+.project > div > div > div {
+  width: fit-content;
+  height: min-content;
+  margin-left: 10px;
+}
+.project > div > div > div > a {
+  margin-bottom: 4px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 900;
+  color: #fff;
+}
+.project > div > div > div > p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+}
+.project > div .fa {
+  font-size: 25px;
+  margin-right: 20px;
+  align-self: flex-end;
+  color: #ededed;
+  cursor: pointer;
+  align-self: center;
+  align-content: flex-end;
+}
+/*   footer   */
+footer {
+  height: 250px !important;
+}
+/*  responsive  */
+@media screen and (max-width: 600px) {
+  footer .container img:first-of-type {
+    width: 80px;
+    height: 70px;
+  }
+  .pr {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .pr .container {
+    justify-content: center;
+  }
+  .pr .container .info > div:first-of-type {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+    height: 230px;
+  }
+  .pr .container .info {
+    flex-basis: 97%;
+    margin-bottom: 20px;
+  }
+  .pr .container .skills {
+    flex-basis: 97%;
+  }
+  .pr .container .info > .social {
+    width: 100%;
+    height: 270px;
+  }
+  .pr .container .info > span {
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 250px;
+    max-height: 250px;
+  }
+  .pr .container .info > span img {
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 250px;
+    max-height: 250px;
+  }
+  .pr .container .info div:first-of-type h1 {
+    font-size: 21px;
+  }
+  .pr .container .info div:first-of-type span input {
+    height: 35px;
+    font-size: 14px;
+    width: 100%;
+  }
+  .pr .container .info div:first-of-type span textarea {
+    font-size: 14px;
+    width: 100%;
+  }
+  .pr .container .info > .social span {
+    flex-basis: 70px;
+    font-size: 16px;
+    margin-top: 7px;
+  }
+  .pr .container .info > .social span input {
+    height: 35px;
+    font-size: 14px;
+    width: 100%;
+  }
+  .pr .container .info button,
+  .pr .container .skills button {
+    height: 35px;
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 767px) {
+  .pr .container {
+    justify-content: center;
+  }
+  .pr .container .info > div:first-of-type {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .pr .container .info {
+    flex-basis: 80%;
+    margin-bottom: 20px;
+  }
+  .pr .container .skills {
+    flex-basis: 80%;
+  }
+  .pr .container .info > .social {
+    width: 68%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .pr .container .info > div:first-of-type {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .pr .container .info {
+    flex-basis: 60%;
+  }
+  .pr .container .skills {
+    flex-basis: 37%;
+  }
+  .pr .container .info > .social {
+    width: 68%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 970px;
+  }
+  .pr .container .info {
+    padding: 10px;
+  }
+  .pr .container .info > div:first-of-type {
+    margin-left: 10px;
+    width: 309px;
+  }
+  .pr .container .skills {
+    height: 500px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 1370px;
+  }
+}

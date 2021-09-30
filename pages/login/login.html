@@ -11,13 +11,17 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="../../css/colorStyle.css">
+    <link rel="stylesheet" href="../../css/login.css">
+    <!-- <link rel="stylesheet" href="../../css/colorStyle.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="../../images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/loading_style.css">
 </head>
 
 <body>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
     <header>
         <div class="logo"><img src="../../images/logo.png" alt=""></div>
         <nav>
@@ -34,11 +38,11 @@
             <form onsubmit="login()" id="loginForm">
                 <div class="inp">
                     <label for="email">Your Email</label>
-                    <input type="email" name="email">
+                    <input type="email" name="email" placeholder="Email">
                 </div>
                 <div class="inp">
                     <label for="pass">Password</label>
-                    <input type="password" required name="pass">
+                    <input type="password" required name="pass" placeholder="Password">
                     <i class="fa fa-eye" id="show"></i>
                 </div>
                 <button type="submit">Sign In</button>
@@ -54,7 +58,17 @@
         </div>
         <img src="../../images/undraw_Login_re_4vu2.svg" alt="">
     </div>
-    <script type="module" src="login.js"></script>
+    <script type="module" src="../../JS/login.js"></script>
+    <script>
+        window.addEventListener( "load", function ()
+        {
+            setTimeout( () =>
+            {
+                document.querySelector( ".loader-wrapper" ).style.display = "none";
+                console.log( "done1" );
+            }, 2000 )
+        } );
+    </script>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js";
 import { getDatabase, ref, set, update } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-database.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-auth.js";
 
 
 const firebaseConfig = {
@@ -108,3 +109,12 @@ navbar[1].onclick = function (){
     page2.style.display = "flex";
     navbar[1].classList.add('active');
 }
+const auth = getAuth();
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    location.replace('pages/home.html')
+  } else {
+    // User is signed out
+    // ...
+  }
+});

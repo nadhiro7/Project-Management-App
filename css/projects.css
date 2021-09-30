@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 300ms;
+    font-family: "Urbanist", sans-serif;
+  }
+  :root {
+    --prColor: #9c27b0;
+    --btnBg: #9c27b0a8;
+    --brBtn: #9c27b0e0;
+  }
+  ::selection {
+    background-color: var(--btnBg);
+    color: #fff;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*   projects  */
+  .projects {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--brBtn);
+    padding-top: 50px;
+    padding-bottom: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .projects .container {
+    height: fit-content;
+    background-color: #fff;
+    box-shadow: 2px 3px 35px rgba(0, 0, 0, 0.6);
+  }
+  .header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+    border-bottom: 1px solid var(--brBtn);
+    position: relative;
+    flex-wrap: wrap;
+  }
+  .header div {
+    width: fit-content;
+    position: relative;
+  }
+  .header div button {
+    border: none;
+    background-color: #fff;
+    font-size: 16px;
+    margin-right: 10px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .header div button:hover {
+    color: var(--prColor);
+  }
+  .act {
+    color: var(--prColor);
+  }
+  .header div button::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    display: block;
+    box-sizing: border-box;
+    background: var(--prColor);
+    margin: auto;
+    transition: all 0.5s ease 0s;
+    font-size: 20px;
+  }
+  .header div button:hover::after {
+    width: 100%;
+  }
+  .header div .act::after {
+    width: 100%;
+  }
+  #search {
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 30px;
+    padding-right: 7px;
+    border: 1px solid var(--btnBg);
+  }
+  .header div label {
+    position: absolute;
+    top: 8px;
+    left: 7px;
+    font-size: 20px;
+    color: var(--prColor);
+  }
+  .body {
+    width: 100%;
+    height: calc(100% - 130px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .liked{
+    width: 100%;
+    height: calc(100% - 130px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .project {
+    flex-basis: 31%;
+    height: 320px;
+    background-color: var(--btnBg);
+    background-size: 400% 400%;
+    border-radius: 7px;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .project > img {
+    width: 90%;
+    height: 230px;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  .project > div {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+  .project > div > div {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .project > div > div > img {
+    width: 45px;
+    height: 40px;
+  }
+  .project > div > div > div {
+    width: fit-content;
+    height: fit-content;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  .project > div > div > div > a {
+    margin-bottom: 4px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 900;
+    color: #fff;
+    white-space: initial;
+  }
+  .project > div > div > div > p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: underline;
+  }
+  .project > div .fa {
+    font-size: 25px;
+    margin-right: 20px;
+    align-self: flex-end;
+    color: #ededed;
+    cursor: pointer;
+    align-self: center;
+    align-content: flex-end;
+  }
+  .footer {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--brBtn);
+  }
+  .footer button {
+    width: 110px;
+    height: 40px;
+    background-color: var(--btnBg);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--brBtn);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .footer button:hover {
+    background-color: var(--prColor);
+    text-shadow: 0px 0px 2px #fff;
+  }
+  .footer button:last-of-type .fa {
+    margin-left: 7px;
+  }
+  .footer button:first-of-type .fa {
+    margin-right: 7px;
+  }
+  .footer p {
+    width: fit-content;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+  /*   footer   */
+  footer {
+    height: 250px !important;
+  }
+  /*  responsive  */
+  @media screen and (max-width: 600px) {
+    footer .container img:first-of-type {
+      width: 80px;
+      height: 70px;
+    }
+    .header{
+      height: 100px;
+      padding-left: 0;
+      justify-content: center;
+    }
+    #search {
+      width: 230px;
+      font-size: 14px;
+    }
+    .footer button {
+        width: 80px;
+        height: 32px;
+        font-size: 14px;
+    }
+    .project{
+      flex-basis: 100%;
+      height: fit-content;
+    }
+    .container{
+      padding: 0%;
+    }
+    header .container{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .project > div > div > div > a {
+      font-size: 13px;
+      font-weight: 700;
+      white-space: initial;
+    }
+    .project > div > div > div {
+      margin-bottom: 10px;
+    }
+    .project > div > div > div > p {
+      font-size: 12px;
+      font-weight: 400;
+      text-decoration: underline;
+    }
+    .project > div .fa {
+      font-size: 21px;
+    }
+  }
+  @media screen and (min-width: 601px) and (max-width: 767px) {
+    .project{
+      flex-basis: 400px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .project{
+      flex-basis: 45%;
+    }
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    .container {
+      width: 970px;
+    }
+    .project{
+      flex-basis: 400px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  @media screen and (min-width: 1400px) {
+    .container {
+      width: 1370px;
+    }
+  }
+  

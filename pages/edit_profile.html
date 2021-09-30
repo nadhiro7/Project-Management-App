@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCC | Edit Profile</title>
+    <!-- font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- icons link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- title logo icon -->
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <!-- style -->
+    <link rel="stylesheet" href="../css/edit_profile.css">
+    <link rel="stylesheet" href="../css/loading_style.css">
+    <link rel="stylesheet" href="../css/navBar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="../images/logo.png" alt="">
+                    <p class="back">Start Coding Club</p>
+                </div>
+                <i class="fa fa-bars" onclick="navbar()" id="menu"></i>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="projects.html">Project</a></li>
+                    <li><a href="chat.html">Chat</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="members.html">Members</a></li>
+                </ul>
+                <div class="profile">
+                    <div>
+                        <img src="" id="userPhoto" alt="">
+                        <p id="userName"></p>
+                    </div>
+                    <ul>
+                        <li><a href="#">Edit Profile</a></li>
+                        <li><button id="signOut"><i class="fa fa-sign-out"></i> Sign Out</button></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="pr">
+        <div class="container">
+            <div class="info">
+                <span>
+                    <img src="" id="ph_pro" alt="">
+                    <label for="image" title="Change photo profile"><i class="fa fa-camera"></i></label>
+                    <input type="file" name="image" id="image" accept="image/*" />
+                    <span id="up" style="align-self: center; color: red; font-size: 15px;"></span>
+                </span>
+                <div>
+                    <h1>Edit Your Profile <i class="fa fa-edit"></i></h1>
+                    <span><input type="text" placeholder="New UserName" id="name" maxlength="14" /></span>
+                    <span><textarea name="" id="bio" cols="50" maxlength="120" rows="8" placeholder="Add Bio"></textarea></span>
+                </div>
+                <div class="social">
+                    <span>
+                        <label for="facebook">Your profile on Facebook <i class="fa fa-facebook"></i></label>
+                        <input type="url" name="facebook" id="facebook">
+                    </span>
+                    <span>
+                        <label for="instagram">Your profile on Instagram <i class="fa fa-instagram"></i></label>
+                        <input type="url" name="instagram" id="instagram">
+                    </span>
+                    <span>
+                        <label for="github">Your profile on Github <i class="fa fa-github"></i></label>
+                        <input type="url" name="github" id="github">
+                    </span>
+                </div>
+                <button id="edit">Save Change</button>
+            </div>
+            <div class="skills">
+                <div>
+                    <h2>Your Skills</h2>
+                    <i class="fa fa-pencil" id="addSkill"></i>
+                </div>
+                <ul id="sk">
+                </ul>
+                <span id="d" style="align-self: center; color: green; font-size: 15px;"></span>
+                <button id="skillsChange">Save Change</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <img src="../images/logo.png" alt="">
+            <p>Start Coding Club</p>
+            <div class="icon">
+                <a href="https://www.facebook.com/profile.php?id=100068577551540" target="_blank"><i
+                        class="fa fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/startcodingclub/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="mailto:startcodingclub@outlook.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            </div>
+            <img src="../images/logo.png" alt="">
+            <p>© 2021 Start Coding Club</p>
+        </div>
+    </footer>
+    <img id='url' alt="" style="display: none;">
+    <p id="nm" style="display: none;"></p>
+    <script>
+        function navbar()
+        {
+            let menu = document.getElementById( "menu" );
+            if ( menu.classList.contains( "fa-bars" ) )
+            {
+                document.querySelector( ".profile" ).classList.add( "vsb" );
+                document.querySelector( "nav > ul" ).classList.add( "vsb" );
+                menu.classList.replace( "fa-bars", "fa-times" );
+            } else
+            {
+                document.querySelector( ".profile" ).classList.remove( "vsb" );
+                document.querySelector( "nav > ul" ).classList.remove( "vsb" );
+                menu.classList.replace( "fa-times", "fa-bars" );
+            }
+        }
+        let listSkills = document.getElementById( "sk" );
+        let addSkill = document.getElementById( "addSkill" );
+        // newSkill = newSkill.innerHTML = `<input type="text" name="" id="">`;
+        let input = document.createElement( "input" );
+        input.setAttribute( "type", "text" );
+        let newSkill = document.createElement( "li" );
+        let i = 0;
+        newSkill.appendChild( input );
+        addSkill.onclick = () =>
+        {
+            if ( addSkill.classList.contains( "fa-pencil" ) )
+            {
+                addSkill.classList.replace( "fa-pencil", "fa-plus" );
+                listSkills.appendChild( newSkill );
+                document.getElementById( 'skillsChange' ).setAttribute( "disabled", "" );
+            } else
+            {
+                if ( input.value !== "" )
+                {
+                    addSkill.classList.replace( "fa-plus", "fa-pencil" );
+                    let remove = document.createElement( "i" );
+                    remove.setAttribute( "class", "fa fa-times rm" );
+                    remove.setAttribute( "style", "font-size: 20px;color: var(--prColor);" );
+                    remove.setAttribute( "onclick", "remove(this.id)" );
+                    remove.setAttribute( "id", `${ listSkills.children.length }` );
+                    newSkill.innerHTML = input.value;
+                    newSkill.appendChild( remove );
+                    input = document.createElement( "input" );
+                    input.setAttribute( "type", "text" );
+                    newSkill = document.createElement( "li" );
+                    newSkill.appendChild( input );
+                    document.getElementById( 'skillsChange' ).removeAttribute( "disabled" );
+                }
+            }
+        }
+        function remove( clicked_id )
+        {
+            listSkills.removeChild( document.getElementById( clicked_id ).parentElement );
+        }
+    </script>
+    <script type="module" src="../JS/editProfile.js"></script>
+    <script src="../JS/storage2.js" type="module"></script>
+    <script>
+        document.querySelector( "section" ).style.display = "none";
+
+        window.addEventListener( "load", function ()
+        {
+            setTimeout( () =>
+            {
+                document.querySelector( ".loader-wrapper" ).style.display = "none";
+                console.log( "done1" );
+                document.querySelector( "section" ).style.display = "block";
+            }, 4000 )
+        } );
+    </script>
+</body>
+
+</html>

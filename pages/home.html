@@ -1,18 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SCC | Home</title>
+    <!-- font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- icons link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- title logo icon -->
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <!-- style -->
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/loading_style.css">
+    <link rel="stylesheet" href="../css/navBar.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
-
 <body>
-    <div>Hello Mr <p></p>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
     </div>
-    <script type="module" src="home.js"></script>
-    <button>log out</button>
-</body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="../images/logo.png" alt="">
+                    <p class="back">Start Coding Club</p>
+                </div>
+                <i class="fa fa-bars" onclick="navbar()" id="menu"></i>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="projects.html">Project</a></li>
+                    <li><a href="chat.html">Chats</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="members.html">Members</a></li>
+                </ul>
+                <div class="profile">
+                    <div>
+                        <img id="userPhoto" src="" alt="">
+                        <p id="userName"></p>
+                    </div>
+                    <ul>
+                        <li><a href="edit_profile.html">Edit Profile</a></li>
+                        <li><button id="signOut"><i class="fa fa-sign-out"></i> Sign Out</button></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="home">
+        <div class="container">
+            <div>
+                <h1>Welcome To <br> Start Coding Club</h1>
+                <p id="name"></p>
+            </div>
+            <img src="../images/undraw_programming_2svr.svg" alt="">
+        </div>
+    </section>
+    <section class="events">
+        <div class="container">
+            <div class="event">
+                <img src="../images/Black Scary Halloween Night.png" alt="">
+            </div>
+            <div class="event_par">CLUB <br> EVENTS</div>
+            <div class="event">
+                <img src="../images/Black Scary Halloween Night (1).png" alt="">
+            </div>
+        </div>
+    </section>
+    <div class="container spr"></div>
+    <section class="projects">
+        <div class="container">
+            <div>
+                <h3>Latest Projects</h3>
+                <a href="projects.html">More Projects <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <div class="container spr"></div>
+    <section class="chat">
+        <div class="container">
+            <i class="fa fa-wechat"></i>
+            <p>You can now communicate with Club members easily <br> and at any time</p>
+            <a href="chat.html">Chat Now</a>
+        </div>
+    </section>
+    <section class="members">
+        <a href="members.html">Show More</a>
+        <div class="container">
+            <div class="card">
+                <div class="content">
+                    <div class="imgBx"><img src="" alt=""></div>
+                    <div class="contentBx">
+                        <h3 class="prof"><span></span></h3>
+                    </div>
+                </div>
+                <ul class="sci">
+                    <li style="--i:1">
+                        <a target="_blank" href=""><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li style="--i:2">
+                        <a target="_blank" href=""><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li style="--i:3">
+                        <a target="_blank" href=""><i class="fa fa-github"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <div class="imgBx"><img src="" alt=""></div>
+                    <div class="contentBx">
+                        <h3 class="prof"><span></span></h3>
+                    </div>
+                </div> 
+                <ul class="sci">
+                    <li style="--i:1">
+                        <a target="_blank" href=""><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li style="--i:2">
+                        <a target="_blank" href=""><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li style="--i:3">
+                        <a target="_blank" href=""><i class="fa fa-github"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <div class="imgBx"><img src="" alt=""></div>
+                    <div class="contentBx">
+                        <h3 class="prof"><span></span></h3>
+                    </div>
+                </div>
+                <ul class="sci">
+                    <li style="--i:1">
+                        <a target="_blank" href=""><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li style="--i:2">
+                        <a target="_blank" href=""><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li style="--i:3">
+                        <a target="_blank" href=""><i class="fa fa-github"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="slider">
+        <div class="container">
+            <div>
+                <i class="fa fa-angle-left" id="left"></i>
+                <img src="../images/1.jpg" alt="" class="left" id="1">
+                <img src="../images/2.jpg" alt="" class="center" id="2">
+                <img src="../images/3.jpg" alt="" class="right" id="3">
+                <i class="fa fa-angle-right" id="right"></i>
+            </div>
+            <div class="changes">
+                <span id="left"></span>
+                <span id="center"></span>
+                <span id="right"></span>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <img src="../images/logo.png" alt="">
+            <p>Start Coding Club</p>
+            <div class="icon">
+                <a href="https://www.facebook.com/profile.php?id=100068577551540" target="_blank"><i
+                        class="fa fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/startcodingclub/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="mailto:startcodingclub@outlook.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            </div>
+            <div class="dots" title="Change Website Theme Color">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <img src="../images/logo.png" alt="">
+            <p>© 2021 Start Coding Club</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../JS/vanilla-tilt.js"></script>
+    <script>
+        function navbar()
+        {
+            let menu = document.getElementById( "menu" );
+            if ( menu.classList.contains( "fa-bars" ) )
+            {
+                document.querySelector( ".profile" ).classList.add( "vsb" );
+                document.querySelector( "nav > ul" ).classList.add( "vsb" );
+                menu.classList.replace( "fa-bars", "fa-times" );
+            } else
+            {
+                document.querySelector( ".profile" ).classList.remove( "vsb" );
+                document.querySelector( "nav > ul" ).classList.remove( "vsb" );
+                menu.classList.replace( "fa-times", "fa-bars" );
+            }
+        }
+        VanillaTilt.init( document.querySelector( ".event" ), {
+            max: 25,
+            speed: 400
+        } );
+        //It also supports NodeList
+        VanillaTilt.init( document.querySelectorAll( ".event" ) );
+        VanillaTilt.init( document.querySelector( ".card" ), {
+            max: 15,
+            speed: 200
+        } );
+        //It also supports NodeList
+        VanillaTilt.init( document.querySelectorAll( ".card" ) );
+    </script>
+    <script type="module" src="../JS/home.js"></script>
+    <script>
+        document.querySelectorAll( "section" )[ 0 ].style.display = "none";
+        document.querySelectorAll( "section" )[ 1 ].style.display = "none";
+        document.querySelectorAll( "section" )[ 2 ].style.display = "none";
+        document.querySelectorAll( "section" )[ 3 ].style.display = "none";
+        document.querySelectorAll( "section" )[ 4 ].style.display = "none";
+        document.querySelectorAll( "section" )[ 5 ].style.display = "none";
 
+        window.addEventListener( "load", function ()
+        {
+            setTimeout( () =>
+            {
+                document.querySelector( ".loader-wrapper" ).style.display = "none";
+                console.log( "done1" );
+                document.querySelectorAll( "section" )[ 0 ].style.display = "block";
+                document.querySelectorAll( "section" )[ 1 ].style.display = "block";
+                document.querySelectorAll( "section" )[ 2 ].style.display = "block";
+                document.querySelectorAll( "section" )[ 3 ].style.display = "block";
+                document.querySelectorAll( "section" )[ 4 ].style.display = "block";
+                document.querySelectorAll( "section" )[ 5 ].style.display = "flex";
+            }, 5000 )
+        } );
+        let left = document.getElementById( "left" );
+        left.onclick = () =>
+        {
+            let img1 = document.getElementById( "1" );
+            let img2 = document.getElementById( "2" );
+            let img3 = document.getElementById( "3" );
+            img1.classList.contains( "left" ) ? img1.classList.replace( "left", "right" ) : img1.classList.contains( "center" ) ? img1.classList.replace( "center", "left" ) : img1.classList.replace( "right", "center" );
+            img2.classList.contains( "left" ) ? img2.classList.replace( "left", "right" ) : img2.classList.contains( "center" ) ? img2.classList.replace( "center", "left" ) : img2.classList.replace( "right", "center" );
+            img3.classList.contains( "left" ) ? img3.classList.replace( "left", "right" ) : img3.classList.contains( "center" ) ? img3.classList.replace( "center", "left" ) : img3.classList.replace( "right", "center" );
+        }
+        let right = document.getElementById( "right" );
+        right.onclick = () =>
+        {
+            let img1 = document.getElementById( "1" );
+            let img2 = document.getElementById( "2" );
+            let img3 = document.getElementById( "3" );
+            img1.classList.contains( "right" ) ? img1.classList.replace( "right", "left" ) : img1.classList.contains( "center" ) ? img1.classList.replace( "center", "right" ) : img1.classList.replace( "left", "center" );
+            img2.classList.contains( "right" ) ? img2.classList.replace( "right", "left" ) : img2.classList.contains( "center" ) ? img2.classList.replace( "center", "right" ) : img2.classList.replace( "left", "center" );
+            img3.classList.contains( "right" ) ? img3.classList.replace( "right", "left" ) : img3.classList.contains( "center" ) ? img3.classList.replace( "center", "right" ) : img3.classList.replace( "left", "center" );
+        }
+    </script>
+</body>
 </html>

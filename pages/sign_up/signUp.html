@@ -11,13 +11,17 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="signUp.css">
-    <link rel="stylesheet" href="../../css/colorStyle.css">
+    <link rel="stylesheet" href="../../css/signUp.css">
+    <!-- <link rel="stylesheet" href="../../css/colorStyle.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="../../images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/loading_style.css">
 </head>
 
 <body>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
     <header>
         <div class="logo"><img src="../../images/logo.png" alt=""></div>
         <nav>
@@ -35,24 +39,28 @@
                 <div class="name">
                     <div class="in">
                         <label for="Fname">FirstName</label>
-                        <input type="text" required name="Fname" id="Fname">
+                        <input type="text" required name="Fname" id="Fname" maxlength="16" placeholder="FirstName">
+                        <i class="fa fa-times-circle" style="display: none;" id="icon1"></i>
                     </div>
                     <div class="in">
                         <label for="Lname">LastName</label>
-                        <input type="text" required name="Lname" id="Lname">
+                        <input type="text" required name="Lname" id="Lname" maxlength="16" placeholder="LastName">
+                        <i class="fa fa-check" style="display: none;" id="icon2"></i>
                     </div>
                 </div>
                 <div class="inp">
                     <label for="username">UserName</label>
-                    <input type="text" required name="username" id="username">
+                    <input type="text" required name="username" id="username" maxlength="14" placeholder="UserName">
+                    <i class="fa fa-check" style="display: none;" id="icon3"></i>
                 </div>
                 <div class="inp">
                     <label for="email">Your Email</label>
-                    <input type="email" required name="email" id="email">
+                    <input type="email" required name="email" id="email" placeholder="Email">
+                    <i class="fa fa-check" style="display: none;" id="icon4"></i>
                 </div>
                 <div class="inp">
                     <label for="pass">New Password</label>
-                    <input type="password" required name="pass" id="pass">
+                    <input type="password" required name="pass" id="pass" maxlength="20" minlength="8" placeholder="Password">
                     <i class="fa fa-eye" id="show"></i>
                 </div>
                 <button>Sign Up</button>
@@ -65,7 +73,17 @@
         </div>
         <img src="../../images/undraw_Login_re_4vu2.svg" alt="">
     </div>
-    <script type="module" src="signUp.js"></script>
+    <script type="module" src="../../JS/signUp.js"></script>
+    <script>
+        window.addEventListener( "load", function ()
+        {
+            setTimeout( () =>
+            {
+                document.querySelector( ".loader-wrapper" ).style.display = "none";
+                console.log( "done1" );
+            }, 2000 )
+        } );
+    </script>
 </body>
 
 </html>
